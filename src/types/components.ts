@@ -24,7 +24,7 @@ export interface AlertItemProps {
 export interface TaskItemProps {
   task: string
   date: string
-  status?: 'pending' | 'completed'
+  status?: 'pending' | 'scheduled' | 'completed'
 }
 
 export interface TabButtonProps {
