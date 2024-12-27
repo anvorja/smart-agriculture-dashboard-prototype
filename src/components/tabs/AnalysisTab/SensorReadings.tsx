@@ -1,7 +1,7 @@
 import {SectionHeader} from "@/components/shared/SectionHeader";
 import {Card} from "@/components/ui/card";
 import {Droplet, ThermometerSun, Wind} from "lucide-react";
-import {sensorData} from "@/data/mockData";
+import {sensorData} from "@/data/analysisMockData";
 
 const SensorValue = ({label, value}: { label: string; value: string }) => (
     <div className="flex flex-col">
