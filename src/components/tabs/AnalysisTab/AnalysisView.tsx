@@ -7,7 +7,7 @@ import { DataCollection } from './DataCollection'
 import { SoilComposition } from './SoilComposition'
 import { NutrientAnalysis } from './NutrientAnalysis'
 import { TopographicAnalysis } from './TopographicAnalysis'
-//import { HistoricalTrends } from './HistoricalTrends'
+import { HistoricalTrends } from './HistoricalTrends'
 
 export const AnalysisView = () => {
     return (
@@ -28,7 +28,7 @@ export const AnalysisView = () => {
             {/* Tercera fila - Análisis espacial y tendencias */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <TopographicAnalysis />
-                {/*<HistoricalTrends />*/}
+                <HistoricalTrends />
             </div>
         </div>
     )

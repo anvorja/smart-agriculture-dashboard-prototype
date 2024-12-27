@@ -5,7 +5,7 @@ import {
     SoilPropertyData,
     SoilClassification,
     NutrientRatio,
-    NutrientData, DrainageData, TerrainZone
+    NutrientData, DrainageData, TerrainZone, SeasonalPattern, HistoricalMetric
 } from '@/types/analysis'
 
 export const sensorData: SensorReading[] = [
@@ -185,4 +185,62 @@ export const drainageData: DrainageData[] = [
     { zoneId: 'z1', flow: 12.5, accumulation: 45, direction: 'SE' },
     { zoneId: 'z2', flow: 8.2, accumulation: 65, direction: 'S' },
     { zoneId: 'z3', flow: 15.8, accumulation: 35, direction: 'SW' }
+]
+
+export const historicalData = {
+    moisture: [
+        { month: '2023-10', value: 68, target: 70 },
+        { month: '2023-11', value: 72, target: 70 },
+        { month: '2023-12', value: 65, target: 70 },
+        { month: '2024-01', value: 69, target: 70 },
+        { month: '2024-02', value: 71, target: 70 },
+        { month: '2024-03', value: 70, target: 70 }
+    ] as HistoricalMetric[],
+    temperature: [
+        { month: '2023-10', value: 22, target: 25 },
+        { month: '2023-11', value: 24, target: 25 },
+        { month: '2023-12', value: 26, target: 25 },
+        { month: '2024-01', value: 25, target: 25 },
+        { month: '2024-02', value: 23, target: 25 },
+        { month: '2024-03', value: 24, target: 25 }
+    ] as HistoricalMetric[],
+    pH: [
+        { month: '2023-10', value: 6.8, target: 7.0 },
+        { month: '2023-11', value: 6.9, target: 7.0 },
+        { month: '2023-12', value: 7.1, target: 7.0 },
+        { month: '2024-01', value: 7.0, target: 7.0 },
+        { month: '2024-02', value: 6.9, target: 7.0 },
+        { month: '2024-03', value: 6.8, target: 7.0 }
+    ] as HistoricalMetric[]
+}
+
+export const seasonalPatterns: SeasonalPattern[] = [
+    {
+        season: 'Primavera',
+        moisture: 'Alta',
+        temperature: 'Moderada',
+        growth: 'Óptimo',
+        alerts: 2
+    },
+    {
+        season: 'Verano',
+        moisture: 'Baja',
+        temperature: 'Alta',
+        growth: 'Moderado',
+        alerts: 5
+    },
+    {
+        season: 'Otoño',
+        moisture: 'Moderada',
+        temperature: 'Moderada',
+        growth: 'Bueno',
+        alerts: 1
+    },
+    {
+        season: 'Invierno',
+        moisture: 'Alta',
+        temperature: 'Baja',
+        growth: 'Lento',
+        alerts: 3
+    }
 ]

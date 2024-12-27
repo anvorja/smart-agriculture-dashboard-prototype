@@ -98,3 +98,17 @@ export interface DrainageData {
   direction: string;
 }
 
+export interface HistoricalMetric {
+  month: string;
+  value: number;
+  target: number;
+}
+
+export interface SeasonalPattern {
+  season: string;
+  moisture: 'Alta' | 'Moderada' | 'Baja';
+  temperature: 'Alta' | 'Moderada' | 'Baja';
+  growth: 'Óptimo' | 'Bueno' | 'Moderado' | 'Lento';
+  alerts: number;
+}
+
