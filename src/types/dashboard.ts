@@ -1,4 +1,4 @@
-// src/types/components.ts
+// src/types/dashboard.ts
 import { LucideIcon } from 'lucide-react'
 import React from "react";
 
@@ -32,4 +32,17 @@ export interface TabButtonProps {
   icon: LucideIcon;
   children: React.ReactNode;
   className?: string;
+}
+
+export interface GrowthTrendData {
+  date: string
+  ndvi: number
+  moisture: number
+  temp: number
+}
+
+export interface ResourceUsageData {
+  time: string
+  water: number
+  nutrients: number
 }

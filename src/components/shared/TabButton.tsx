@@ -1,6 +1,6 @@
 // src/components/shared/TabButton.tsx
 import { TabsTrigger } from '@/components/ui/tabs'
-import { TabButtonProps } from '@/types/components'
+import { TabButtonProps } from '@/types/dashboard'
 
 
 export const TabButton = ({

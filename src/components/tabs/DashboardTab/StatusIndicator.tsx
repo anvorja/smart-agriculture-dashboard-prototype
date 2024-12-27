@@ -5,7 +5,7 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from '@/components/ui/tooltip'
-import {StatusIndicatorProps} from "@/types/components";
+import {StatusIndicatorProps} from "@/types/dashboard";
 
 export const StatusIndicator = ({
                                     icon: Icon,

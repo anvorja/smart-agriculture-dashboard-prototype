@@ -1,72 +1,4 @@
 // // src/components/DashboardTab/DashboardView.tsx
-// import { DashboardCard } from './DashboardCard'
-// import { StatusIndicator } from './StatusIndicator'
-// import { AlertItem } from './AlertItem'
-// import { TaskItem } from './TaskItem'
-// import { Droplet, ThermometerSun, Wind } from 'lucide-react'
-//
-// export const DashboardView = () => {
-//   return (
-//     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//       <DashboardCard
-//         title="Estado del Cultivo"
-//         description="Resumen general"
-//         className="bg-gradient-to-br from-white to-emerald-50"
-//       >
-//         <div className="space-y-3">
-//           <StatusIndicator
-//             icon={Droplet}
-//             label="Humedad del suelo"
-//             value="65%"
-//           />
-//           <StatusIndicator
-//             icon={ThermometerSun}
-//             label="pH del suelo"
-//             value="6.5"
-//           />
-//           <StatusIndicator
-//             icon={Wind}
-//             label="Temperatura"
-//             value="24°C"
-//           />
-//         </div>
-//       </DashboardCard>
-//
-//       <DashboardCard
-//         title="Alertas Activas"
-//         description="Requieren atención"
-//       >
-//         <div className="space-y-3">
-//           <AlertItem
-//             message="Nivel bajo de nitrógeno en sector A3"
-//             type="error"
-//           />
-//           <AlertItem
-//             message="Riego programado en 2 horas"
-//             type="warning"
-//           />
-//         </div>
-//       </DashboardCard>
-//
-//       <DashboardCard
-//         title="Próximas Tareas"
-//         description="Calendario de actividades"
-//       >
-//         <div className="space-y-2">
-//           <TaskItem
-//             task="Fertilización"
-//             date="Mañana"
-//           />
-//           <TaskItem
-//             task="Control de plagas"
-//             date="En 3 días"
-//           />
-//         </div>
-//       </DashboardCard>
-//     </div>
-//   )
-// }
-
 'use client'
 
 import { DashboardCard } from './DashboardCard'
@@ -77,18 +9,10 @@ import {
     Droplet, ThermometerSun, Wind, Leaf, Sun, CloudRain, AlertTriangle,
     Settings
 } from 'lucide-react'
-import {
-    LineChart as RechartsLineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer,
-    AreaChart,
-    Area
-} from 'recharts'
+
 import {growthTrends, resourceUsage} from "@/data/dashboardMockData";
+import {GrowthTrendsChart} from "@/components/tabs/DashboardTab/GrowthTrendsChart";
+import {ResourceUsageChart} from "@/components/tabs/DashboardTab/ResourceUsageChart";
 
 
 export const DashboardView = () => {
@@ -183,80 +107,16 @@ export const DashboardView = () => {
                     title="Tendencias de Crecimiento"
                     description="Últimos 5 días"
                 >
-                    <div className="h-[300px] w-full">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <RechartsLineChart data={growthTrends}>
-                                <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
-                                <XAxis dataKey="date" />
-                                <YAxis />
-                                <Tooltip
-                                    contentStyle={{
-                                        backgroundColor: 'white',
-                                        border: '1px solid #E5E7EB',
-                                        borderRadius: '0.5rem'
-                                    }}
-                                />
-                                <Line
-                                    type="monotone"
-                                    dataKey="ndvi"
-                                    name="NDVI"
-                                    stroke="#059669"
-                                    strokeWidth={2}
-                                />
-                                <Line
-                                    type="monotone"
-                                    dataKey="moisture"
-                                    name="Humedad"
-                                    stroke="#0284c7"
-                                    strokeWidth={2}
-                                />
-                                <Line
-                                    type="monotone"
-                                    dataKey="temp"
-                                    name="Temperatura"
-                                    stroke="#eab308"
-                                    strokeWidth={2}
-                                />
-                            </RechartsLineChart>
-                        </ResponsiveContainer>
-                    </div>
+                    <GrowthTrendsChart data={growthTrends} />
                 </DashboardCard>
 
                 <DashboardCard
                     title="Consumo de Recursos"
                     description="Hoy"
                 >
-                    <div className="h-[300px] w-full">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <AreaChart data={resourceUsage}>
-                                <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
-                                <XAxis dataKey="time" />
-                                <YAxis />
-                                <Tooltip
-                                    contentStyle={{
-                                        backgroundColor: 'white',
-                                        border: '1px solid #E5E7EB',
-                                        borderRadius: '0.5rem'
-                                    }}
-                                />
-                                <Area
-                                    type="monotone"
-                                    dataKey="water"
-                                    name="Agua (L/ha)"
-                                    stroke="#0284c7"
-                                    fill="#93c5fd"
-                                />
-                                <Area
-                                    type="monotone"
-                                    dataKey="nutrients"
-                                    name="Nutrientes (kg/ha)"
-                                    stroke="#059669"
-                                    fill="#86efac"
-                                />
-                            </AreaChart>
-                        </ResponsiveContainer>
-                    </div>
+                    <ResourceUsageChart data={resourceUsage} />
                 </DashboardCard>
+
             </div>
 
             {/* Tercera fila - Resúmenes y recomendaciones */}

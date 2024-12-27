@@ -1,5 +1,5 @@
 // src/components/DashboardTab/DashboardCard.tsx
-import { DashboardCardProps } from '@/types/components'
+import { DashboardCardProps } from '@/types/dashboard'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import {MoreVertical} from "lucide-react";
 
