@@ -1,4 +1,4 @@
-// src/components/dashboard/TaskItem.tsx
+// src/components/DashboardTab/TaskItem.tsx
 import { Calendar } from 'lucide-react';
 import { TaskItemProps } from '@/types/components';
 

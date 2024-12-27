@@ -1,4 +1,4 @@
-// src/components/dashboard/StatusIndicator.tsx
+// src/components/DashboardTab/StatusIndicator.tsx
 import {
     Tooltip,
     TooltipContent,

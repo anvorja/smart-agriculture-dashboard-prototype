@@ -1,7 +1,7 @@
 import { Tabs, TabsContent } from '@/components/ui/tabs'
 import { Navigation } from '@/components/shared/Navigation'
 import { Header } from '@/components/layout/Header'
-import { DashboardView } from '@/components/dashboard/DashboardView'
+import { DashboardView } from '@/components/tabs/DashboardTab/DashboardView'
 import { AnalysisView } from '@/components/tabs/AnalysisTab/AnalysisView'
 import {PreparationView} from "@/components/tabs/PreparationTab/PreparationVIew";
 import {PlantingView} from "@/components/tabs/PlantingTab/PlantingView";

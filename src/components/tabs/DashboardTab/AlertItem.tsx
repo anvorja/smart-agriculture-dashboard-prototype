@@ -1,4 +1,4 @@
-// src/components/dashboard/AlertItem.tsx
+// src/components/DashboardTab/AlertItem.tsx
 import { AlertTriangle } from 'lucide-react'
 import { AlertItemProps } from '@/types/components'
 

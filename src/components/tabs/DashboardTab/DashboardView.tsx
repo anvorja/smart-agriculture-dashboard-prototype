@@ -1,4 +1,4 @@
-// src/components/dashboard/DashboardView.tsx
+// src/components/DashboardTab/DashboardView.tsx
 import { DashboardCard } from './DashboardCard'
 import { StatusIndicator } from './StatusIndicator'
 import { AlertItem } from './AlertItem'
