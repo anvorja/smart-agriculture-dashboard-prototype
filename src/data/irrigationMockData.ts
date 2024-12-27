@@ -25,3 +25,16 @@ export const irrigationSchedule: IrrigationSchedule[] = [
     { zone: 'Zona B', duration: 30, status: 'scheduled', startTime: '09:30' },
     { zone: 'Zona C', duration: 40, status: 'scheduled', startTime: '11:00' }
 ];
+
+export const historicalData = [
+    { date: '2024-01', ph: 6.8, conductivity: 1.2, sodium: 175 },
+    { date: '2024-02', ph: 6.7, conductivity: 1.3, sodium: 178 },
+    { date: '2024-03', ph: 6.8, conductivity: 1.2, sodium: 180 }
+]
+
+export const distributionData = [
+    { parameter: 'Calcio', value: 120, limit: 150 },
+    { parameter: 'Magnesio', value: 45, limit: 50 },
+    { parameter: 'Potasio', value: 30, limit: 40 },
+    { parameter: 'Sulfatos', value: 220, limit: 250 }
+]
