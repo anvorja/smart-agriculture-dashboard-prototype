@@ -5,6 +5,8 @@ import { DashboardView } from '@/components/dashboard/DashboardView'
 import { AnalysisView } from '@/components/tabs/AnalysisTab/AnalysisView'
 import {PreparationView} from "@/components/tabs/PreparationTab/PreparationVIew";
 import {PlantingView} from "@/components/tabs/PlantingTab/PlantingView";
+import {NutritionView} from "@/components/tabs/NutritionTab/NutritionView";
+import {IrrigationView} from "@/components/tabs/IrrigationTab/IrrigationView";
 
 export default function Home() {
   return (
@@ -43,10 +45,12 @@ export default function Home() {
 
                       <TabsContent value="nutrition">
                           {/* Contenido de la pestaña Nutrición */}
+                          <NutritionView/>
                       </TabsContent>
 
                       <TabsContent value="irrigation">
                           {/* Contenido de la pestaña Riego */}
+                          <IrrigationView/>
                       </TabsContent>
                   </div>
               </Tabs>
