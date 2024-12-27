@@ -12,12 +12,12 @@ import {
 
 type ActivityType = 'completed' | 'in-progress' | 'pending'
 
-interface Activity {
-    tipo: ActivityType
-    actividad: string
-    fecha: string
-    icon: LucideIcon
-}
+// interface Activity {
+//     tipo: ActivityType
+//     actividad: string
+//     fecha: string
+//     icon: LucideIcon
+// }
 
 const planData = {
     etapaActual: 'Preparación inicial',

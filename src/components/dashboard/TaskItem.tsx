@@ -5,7 +5,7 @@ import { TaskItemProps } from '@/types/components';
 export const TaskItem = ({
                              task,
                              date,
-                             status = 'pending'
+                             // status = 'pending'
                          }: TaskItemProps) => {
     return (
         <div className="flex items-center justify-between p-3 hover:bg-emerald-50 rounded-lg border border-transparent hover:border-emerald-100">
