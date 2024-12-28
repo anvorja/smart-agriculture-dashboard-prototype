@@ -7,6 +7,7 @@ import {
     QualityMetric,
     HistoricalYield
 } from '@/types/harvest'
+import {Sprout, Target, Timer} from "lucide-react";
 
 export const currentMetrics: HarvestMetrics = {
     maturityIndex: 85,
@@ -139,7 +140,6 @@ export const hourlyForecast = [
 
 ]
 
-// Mock data para predicciones (mover a harvestMockData.ts)
 export const harvestPredictions = {
     optimal: {
         date: '2024-03-28',
@@ -158,5 +158,67 @@ export const harvestPredictions = {
         { factor: 'Clima', probability: 15, impact: 'Moderado' },
         { factor: 'Plagas', probability: 8, impact: 'Bajo' },
         { factor: 'Maduración', probability: 5, impact: 'Bajo' }
+    ]
+}
+
+export const aiAnalysis = {
+    overallScore: 87,
+    confidence: 92,
+    insights: [
+        {
+            category: 'Rendimiento',
+            status: 'positive',
+            message: 'Potencial de rendimiento superior al promedio histórico',
+            impact: 'alto'
+        },
+        {
+            category: 'Calidad',
+            status: 'positive',
+            message: 'Parámetros de calidad dentro de rangos óptimos',
+            impact: 'medio'
+        },
+        {
+            category: 'Tiempo',
+            status: 'warning',
+            message: 'Ventana de cosecha limitada por condiciones climáticas',
+            impact: 'alto'
+        }
+    ],
+    recommendations: [
+        {
+            priority: 'alta',
+            action: 'Programar cosecha dentro de los próximos 3 días',
+            rationale: 'Maximizar calidad y rendimiento'
+        },
+        {
+            priority: 'media',
+            action: 'Ajustar configuración de equipos de cosecha',
+            rationale: 'Optimizar eficiencia de recolección'
+        },
+        {
+            priority: 'media',
+            action: 'Coordinar logística de transporte y almacenamiento',
+            rationale: 'Minimizar pérdidas post-cosecha'
+        }
+    ],
+    keyMetrics: [
+        {
+            name: 'Madurez',
+            value: '95%',
+            trend: 'optimal',
+            icon: Target
+        },
+        {
+            name: 'Humedad',
+            value: '14.2%',
+            trend: 'good',
+            icon: Sprout
+        },
+        {
+            name: 'Tiempo Restante',
+            value: '72h',
+            trend: 'warning',
+            icon: Timer
+        }
     ]
 }
