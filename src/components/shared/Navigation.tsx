@@ -8,7 +8,8 @@ import {
   Settings,
   Sprout,
   Leaf,
-  CloudRain
+  CloudRain,
+  Tractor
 } from 'lucide-react'
 
 const navigationItems = [
@@ -18,6 +19,7 @@ const navigationItems = [
   { value: 'planting', icon: Sprout, label: 'Siembra' },
   { value: 'nutrition', icon: Leaf, label: 'Nutrición' },
   { value: 'irrigation', icon: CloudRain, label: 'Riego' },
+  { value: 'harvest', icon: Tractor, label: 'Cosecha' },
 ] as const
 
 export const Navigation = () => {
