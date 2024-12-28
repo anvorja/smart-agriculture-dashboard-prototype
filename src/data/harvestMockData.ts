@@ -25,19 +25,65 @@ export const organicReadings: OrganicMatterReading[] = [
         leafArea: 4.2,
         soilMoisture: 32
     },
-    // ... más datos
-]
+    {
+        date: '02',
+        chlorophyll: 47.8,
+        nitrogen: 3.1,
+        biomass: 13.2,
+        leafArea: 4.5,
+        soilMoisture: 35
+    },
+    {
+        date: '03',
+        chlorophyll: 46.5,
+        nitrogen: 2.9,
+        biomass: 13.8,
+        leafArea: 4.7,
+        soilMoisture: 33
+    },
+    {
+        date: '04',
+        chlorophyll: 48.1,
+        nitrogen: 3.2,
+        biomass: 14.1,
+        leafArea: 4.8,
+        soilMoisture: 34
+    },
+    {
+        date: '05',
+        chlorophyll: 49.3,
+        nitrogen: 3.3,
+        biomass: 14.5,
+        leafArea: 5.0,
+        soilMoisture: 36
+    },
+    {
+        date: '06',
+        chlorophyll: 47.9,
+        nitrogen: 3.0,
+        biomass: 14.8,
+        leafArea: 4.9,
+        soilMoisture: 35
+    }
+];
+
 
 export const yieldEstimates: YieldEstimate[] = [
     {
-        zone: 'Zona Norte',
-        expected: 7.2,
-        actual: 6.8,
+        zone: 'Sur Occidente',
+        expected: 6.8,
+        actual: 7.1,
         unit: 'ton/ha',
-        variance: -5.5
+        variance: 4.4
     },
-    // ... más datos
-]
+    {
+        zone: 'Central',
+        expected: 7.5,
+        actual: 7.3,
+        unit: 'ton/ha',
+        variance: -2.7
+    }
+];
 
 export const maturityIndicators: MaturityIndicator[] = [
     {
@@ -46,8 +92,31 @@ export const maturityIndicators: MaturityIndicator[] = [
         status: 'optimal',
         trend: 'stable'
     },
-    // ... más datos
-]
+    {
+        parameter: 'Contenido de almidón',
+        value: 72.3,
+        status: 'optimal',
+        trend: 'up'
+    },
+    {
+        parameter: 'Proteína',
+        value: 12.8,
+        status: 'warning',
+        trend: 'down'
+    },
+    {
+        parameter: 'Dureza del grano',
+        value: 85.6,
+        status: 'optimal',
+        trend: 'stable'
+    },
+    {
+        parameter: 'Densidad',
+        value: 78.2,
+        status: 'warning',
+        trend: 'stable'
+    }
+];
 
 export const harvestPlan: HarvestPlanning = {
     estimatedDate: '2024-04-15',
@@ -70,9 +139,68 @@ export const qualityMetrics: QualityMetric[] = [
         unit: '%',
         status: 'good'
     },
-]
+    {
+        metric: 'Humedad',
+        value: 14.2,
+        target: 14.5,
+        unit: '%',
+        status: 'good'
+    },
+    {
+        metric: 'Peso Específico',
+        value: 78.5,
+        target: 80.0,
+        unit: 'kg/hl',
+        status: 'warning'
+    },
+    {
+        metric: 'Almidón',
+        value: 72.3,
+        target: 70.0,
+        unit: '%',
+        status: 'good'
+    },
+    {
+        metric: 'Gluten',
+        value: 28.5,
+        target: 30.0,
+        unit: '%',
+        status: 'warning'
+    },
+    {
+        metric: 'Índice de Caída',
+        value: 320,
+        target: 300,
+        unit: 's',
+        status: 'good'
+    },
+    {
+        metric: 'Cenizas',
+        value: 1.8,
+        target: 2.0,
+        unit: '%',
+        status: 'good'
+    },
+    {
+        metric: 'Granos Dañados',
+        value: 2.5,
+        target: 2.0,
+        unit: '%',
+        status: 'warning'
+    }
+];
 
 export const historicalYields: HistoricalYield[] = [
+    {
+        period: '2022-Q3',
+        yield: 5.8,
+        target: 6.0
+    },
+    {
+        period: '2022-Q4',
+        yield: 6.4,
+        target: 6.2
+    },
     {
         period: '2023-Q1',
         yield: 6.2,
@@ -81,9 +209,24 @@ export const historicalYields: HistoricalYield[] = [
     {
         period: '2023-Q2',
         yield: 7.2,
-        target: 5.5
+        target: 6.8
     },
-]
+    {
+        period: '2023-Q3',
+        yield: 6.9,
+        target: 6.5
+    },
+    {
+        period: '2023-Q4',
+        yield: 7.1,
+        target: 6.8
+    },
+    {
+        period: '2024-Q1',
+        yield: 6.8,
+        target: 7.0
+    }
+];
 
 export const weatherForecast = [
     {
