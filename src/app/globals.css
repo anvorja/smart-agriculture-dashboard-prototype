@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: rgb(255 255 255);
+  --foreground: rgb(2 44 34);
+
+  --card-background: rgba(255, 255, 255, 0.95);
+  --card-border: rgba(5, 150, 105, 0.1);
+
+  --emerald-50: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-800: #065f46;
+
+  --success-background: rgba(209, 250, 229, 0.5);
+  --warning-background: rgba(254, 243, 199, 0.5);
+  --error-background: rgba(254, 226, 226, 0.5);
+
+  --success-border: rgba(6, 95, 70, 0.2);
+  --warning-border: rgba(146, 64, 14, 0.2);
+  --error-border: rgba(185, 28, 28, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(17 24 39);
+    --foreground: rgb(243 244 246);
+
+    --card-background: rgba(31, 41, 55, 0.95);
+    --card-border: rgba(5, 150, 105, 0.2);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
