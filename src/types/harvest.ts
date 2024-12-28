@@ -55,3 +55,10 @@ export interface HistoricalYield {
     yield: number;
     target: number;
 }
+
+export interface QualityDataPoint {
+    name: string
+    value: number
+    status: 'good' | 'warning' | 'critical'
+    percentage: string
+}

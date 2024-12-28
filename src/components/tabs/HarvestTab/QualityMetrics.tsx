@@ -6,12 +6,7 @@ import { qualityMetrics } from '@/data/harvestMockData'
 import {
     RadialBarChart,
     RadialBar,
-    PieChart,
-    Pie,
-    Cell,
     ResponsiveContainer,
-    Tooltip as RechartsTooltip,
-    Legend
 } from 'recharts'
 import {AlertCircle, CheckCircle2, Scale, Beaker} from 'lucide-react'
 import {
@@ -41,9 +36,10 @@ export const QualityMetrics = () => {
             />
             <div className="p-4 sm:p-6 space-y-6">
                 {/* Indicador principal de calidad */}
-                <div className="flex items-center justify-between p-4 bg-emerald-50 rounded-lg border border-emerald-100">
+                <div
+                    className="flex items-center justify-between p-4 bg-emerald-50 rounded-lg border border-emerald-100">
                     <div className="flex items-center gap-3">
-                        <Scale className="w-6 h-6 text-emerald-600" />
+                        <Scale className="w-6 h-6 text-emerald-600"/>
                         <div>
                             <p className="text-sm text-emerald-600">Calidad General</p>
                             <p className="text-2xl font-bold text-emerald-700">
@@ -56,7 +52,7 @@ export const QualityMetrics = () => {
                             <RadialBarChart
                                 innerRadius="60%"
                                 outerRadius="100%"
-                                data={[{ value: averageQuality }]}
+                                data={[{value: averageQuality}]}
                                 startAngle={90}
                                 endAngle={-270}
                             >
@@ -89,7 +85,7 @@ export const QualityMetrics = () => {
                                         <Tooltip>
                                             <TooltipTrigger asChild>
                                                 <div className="flex items-center gap-2 cursor-pointer">
-                                                    <Beaker className={`w-4 h-4 ${statusColor}`} />
+                                                    <Beaker className={`w-4 h-4 ${statusColor}`}/>
                                                     <span className="font-medium text-gray-700">
                                                         {metric.metric}
                                                     </span>
@@ -100,7 +96,7 @@ export const QualityMetrics = () => {
                                             </TooltipContent>
                                         </Tooltip>
                                     </TooltipProvider>
-                                    <StatusIcon className={`w-4 h-4 ${statusColor}`} />
+                                    <StatusIcon className={`w-4 h-4 ${statusColor}`}/>
                                 </div>
 
                                 <div className="flex items-end justify-between mb-2">
@@ -127,40 +123,106 @@ export const QualityMetrics = () => {
                 </div>
 
                 {/* Distribución de calidad */}
-                <div>
-                    <h3 className="font-medium text-gray-700 mb-4">Distribución de Calidad</h3>
-                    <div className="h-[200px]">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <PieChart>
-                                <Pie
-                                    data={qualityMetrics}
-                                    dataKey="value"
-                                    nameKey="metric"
-                                    cx="50%"
-                                    cy="50%"
-                                    innerRadius={60}
-                                    outerRadius={80}
-                                    label
-                                >
-                                    {qualityMetrics.map((entry, index) => (
-                                        <Cell
-                                            key={`cell-${index}`}
-                                            fill={COLORS[entry.status]}
-                                        />
-                                    ))}
-                                </Pie>
-                                <RechartsTooltip
-                                    contentStyle={{
-                                        backgroundColor: 'white',
-                                        border: '1px solid #E5E7EB',
-                                        borderRadius: '0.5rem'
-                                    }}
-                                />
-                                <Legend />
-                            </PieChart>
-                        </ResponsiveContainer>
-                    </div>
-                </div>
+                {/*<div>*/}
+                {/*    <h3 className="font-medium text-gray-700 mb-4">Distribución de Calidad</h3>*/}
+                {/*    <div className="h-[200px]">*/}
+                {/*        <ResponsiveContainer width="100%" height="100%">*/}
+                {/*            <PieChart>*/}
+                {/*                <Pie*/}
+                {/*                    data={qualityMetrics}*/}
+                {/*                    dataKey="value"*/}
+                {/*                    nameKey="metric"*/}
+                {/*                    cx="50%"*/}
+                {/*                    cy="50%"*/}
+                {/*                    innerRadius={60}*/}
+                {/*                    outerRadius={80}*/}
+                {/*                    label*/}
+                {/*                >*/}
+                {/*                    {qualityMetrics.map((entry, index) => (*/}
+                {/*                        <Cell*/}
+                {/*                            key={`cell-${index}`}*/}
+                {/*                            fill={COLORS[entry.status]}*/}
+                {/*                        />*/}
+                {/*                    ))}*/}
+                {/*                </Pie>*/}
+                {/*                <RechartsTooltip*/}
+                {/*                    contentStyle={{*/}
+                {/*                        backgroundColor: 'white',*/}
+                {/*                        border: '1px solid #E5E7EB',*/}
+                {/*                        borderRadius: '0.5rem'*/}
+                {/*                    }}*/}
+                {/*                />*/}
+                {/*                <Legend />*/}
+                {/*            </PieChart>*/}
+                {/*        </ResponsiveContainer>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+                {/*<div>*/}
+                {/*    <h3 className="font-medium text-gray-700 mb-4">Distribución de Calidad</h3>*/}
+                {/*    <div className="h-[250px]">*/}
+                {/*        <ResponsiveContainer width="100%" height="100%">*/}
+                {/*            <PieChart>*/}
+                {/*                <Pie*/}
+                {/*                    data={qualityMetrics.map(metric => ({*/}
+                {/*                        name: metric.metric,*/}
+                {/*                        value: metric.value,*/}
+                {/*                        status: metric.status,*/}
+                {/*                        percentage: ((metric.value / metric.target) * 100).toFixed(1)*/}
+                {/*                    }))}*/}
+                {/*                    dataKey="value"*/}
+                {/*                    nameKey="name"*/}
+                {/*                    cx="50%"*/}
+                {/*                    cy="50%"*/}
+                {/*                    innerRadius={60}*/}
+                {/*                    outerRadius={80}*/}
+                {/*                    label={({name, payload}: any) =>*/}
+                {/*                        `${name}: ${payload?.percentage || ''}%`*/}
+                {/*                    }*/}
+                {/*                    labelLine={false}*/}
+                {/*                >*/}
+                {/*                    {qualityMetrics.map((entry, index) => (*/}
+                {/*                        <Cell*/}
+                {/*                            key={`cell-${index}`}*/}
+                {/*                            fill={COLORS[entry.status]}*/}
+                {/*                            strokeWidth={2}*/}
+                {/*                        />*/}
+                {/*                    ))}*/}
+                {/*                </Pie>*/}
+                {/*                <RechartsTooltip*/}
+                {/*                    content={({active, payload}: any) => {*/}
+                {/*                        if (active && payload?.[0]?.payload) {*/}
+                {/*                            const data = payload[0].payload;*/}
+                {/*                            return (*/}
+                {/*                                <div*/}
+                {/*                                    className="bg-white p-2 border border-gray-200 rounded-lg shadow-sm">*/}
+                {/*                                    <p className="font-medium">{data.name}</p>*/}
+                {/*                                    <p className="text-sm text-gray-600">*/}
+                {/*                                        Valor actual: {data.value}*/}
+                {/*                                    </p>*/}
+                {/*                                    <p className="text-sm text-gray-600">*/}
+                {/*                                        Porcentaje: {data.percentage}%*/}
+                {/*                                    </p>*/}
+                {/*                                </div>*/}
+                {/*                            );*/}
+                {/*                        }*/}
+                {/*                        return null;*/}
+                {/*                    }}*/}
+                {/*                />*/}
+                {/*                <Legend*/}
+                {/*                    formatter={(value: string, entry: any) => {*/}
+                {/*                        if (entry?.payload?.percentage) {*/}
+                {/*                            return `${value} (${entry.payload.percentage}%)`;*/}
+                {/*                        }*/}
+                {/*                        return value;*/}
+                {/*                    }}*/}
+                {/*                    layout="vertical"*/}
+                {/*                    align="right"*/}
+                {/*                    verticalAlign="middle"*/}
+                {/*                />*/}
+                {/*            </PieChart>*/}
+                {/*        </ResponsiveContainer>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
                 {/* Recomendaciones de mejora */}
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -168,11 +230,11 @@ export const QualityMetrics = () => {
                         <h4 className="font-medium text-blue-800 mb-3">Análisis de Calidad</h4>
                         <ul className="space-y-2">
                             <li className="text-sm text-blue-700 flex items-start gap-2">
-                                <span className="block w-1 h-1 mt-2 rounded-full bg-blue-400" />
+                                <span className="block w-1 h-1 mt-2 rounded-full bg-blue-400"/>
                                 Proteína y humedad en niveles óptimos
                             </li>
                             <li className="text-sm text-blue-700 flex items-start gap-2">
-                                <span className="block w-1 h-1 mt-2 rounded-full bg-blue-400" />
+                                <span className="block w-1 h-1 mt-2 rounded-full bg-blue-400"/>
                                 Buena distribución de nutrientes
                             </li>
                         </ul>
@@ -182,11 +244,11 @@ export const QualityMetrics = () => {
                         <h4 className="font-medium text-emerald-800 mb-3">Acciones Sugeridas</h4>
                         <ul className="space-y-2">
                             <li className="text-sm text-emerald-700 flex items-start gap-2">
-                                <span className="block w-1 h-1 mt-2 rounded-full bg-emerald-400" />
+                                <span className="block w-1 h-1 mt-2 rounded-full bg-emerald-400"/>
                                 Mantener condiciones de almacenamiento
                             </li>
                             <li className="text-sm text-emerald-700 flex items-start gap-2">
-                                <span className="block w-1 h-1 mt-2 rounded-full bg-emerald-400" />
+                                <span className="block w-1 h-1 mt-2 rounded-full bg-emerald-400"/>
                                 Programar análisis de calidad semanal
                             </li>
                         </ul>
