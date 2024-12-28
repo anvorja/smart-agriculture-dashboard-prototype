@@ -100,60 +100,7 @@ export const HistoricalTrends = () => {
                         <Calendar className="w-5 h-5 flex-shrink-0 text-emerald-600"/>
                         <span className="break-words">Patrones Estacionales</span>
                     </h3>
-                    {/*<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">*/}
-                    {/*    {seasonalPatterns.map((pattern) => (*/}
-                    {/*        <div*/}
-                    {/*            key={pattern.season}*/}
-                    {/*            className="bg-white rounded-lg border border-gray-200 p-4 hover:border-emerald-200 transition-colors"*/}
-                    {/*        >*/}
-                    {/*            <h4 className="font-medium text-gray-800 mb-3 break-words">{pattern.season}</h4>*/}
-                    {/*            <div className="space-y-2">*/}
 
-                    {/*                <div className="flex items-center justify-between gap-2">*/}
-                    {/*                    <div className="flex items-center gap-2 min-w-0">*/}
-                    {/*                        <Droplets className="w-4 h-4 flex-shrink-0 text-blue-600" />*/}
-                    {/*                        <span className="text-sm text-gray-600 truncate">Humedad</span>*/}
-                    {/*                    </div>*/}
-                    {/*                    <span className="text-sm font-medium text-gray-700 whitespace-nowrap">*/}
-                    {/*                    {pattern.moisture}*/}
-                    {/*                </span>*/}
-                    {/*                </div>*/}
-
-                    {/*                <div className="flex items-center justify-between gap-2">*/}
-                    {/*                    <div className="flex items-center gap-2 min-w-0">*/}
-                    {/*                        <Thermometer className="w-4 h-4 flex-shrink-0 text-red-600" />*/}
-                    {/*                        <span className="text-sm text-gray-600 truncate">Temperatura</span>*/}
-                    {/*                    </div>*/}
-                    {/*                    <span className="text-sm font-medium text-gray-700 whitespace-nowrap">*/}
-                    {/*                    {pattern.temperature}*/}
-                    {/*                </span>*/}
-                    {/*                </div>*/}
-
-                    {/*                <div className="flex items-center justify-between gap-2">*/}
-                    {/*                    <div className="flex items-center gap-2 min-w-0">*/}
-                    {/*                        <Activity className="w-4 h-4 flex-shrink-0 text-emerald-600" />*/}
-                    {/*                        <span className="text-sm text-gray-600 truncate">Crecimiento</span>*/}
-                    {/*                    </div>*/}
-                    {/*                    <span className="text-sm font-medium text-gray-700 whitespace-nowrap">*/}
-                    {/*                    {pattern.growth}*/}
-                    {/*                </span>*/}
-                    {/*                </div>*/}
-
-                    {/*                {pattern.alerts > 0 && (*/}
-                    {/*                    <div className="flex items-center justify-between gap-2">*/}
-                    {/*                        <div className="flex items-center gap-2 min-w-0">*/}
-                    {/*                            <AlertTriangle className="w-4 h-4 flex-shrink-0 text-yellow-600" />*/}
-                    {/*                            <span className="text-sm text-gray-600 truncate">Alertas</span>*/}
-                    {/*                        </div>*/}
-                    {/*                        <span className="text-sm font-medium text-yellow-600 whitespace-nowrap">*/}
-                    {/*                        {pattern.alerts}*/}
-                    {/*                    </span>*/}
-                    {/*                    </div>*/}
-                    {/*                )}*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*    ))}*/}
-                    {/*</div>*/}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {seasonalPatterns.map((pattern) => (
                             <div
