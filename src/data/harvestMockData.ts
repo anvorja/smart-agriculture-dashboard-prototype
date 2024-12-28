@@ -69,7 +69,6 @@ export const qualityMetrics: QualityMetric[] = [
         unit: '%',
         status: 'good'
     },
-    // ... más datos
 ]
 
 export const historicalYields: HistoricalYield[] = [
@@ -78,5 +77,86 @@ export const historicalYields: HistoricalYield[] = [
         yield: 6.2,
         target: 6.5
     },
-    // ... más datos
+    {
+        period: '2023-Q2',
+        yield: 7.2,
+        target: 5.5
+    },
 ]
+
+export const weatherForecast = [
+    {
+        date: '2024-03-25',
+        temperature: 24,
+        humidity: 65,
+        precipitation: 10,
+        windSpeed: 12,
+        suitability: 85
+    },
+    {
+        date: '2024-04-25',
+        temperature: 19,
+        humidity: 85,
+        precipitation: 10,
+        windSpeed: 12,
+        suitability: 80
+    },
+    {
+        date: '2024-05-25',
+        temperature: 24,
+        humidity: 78,
+        precipitation: 11,
+        windSpeed: 15,
+        suitability: 90
+    }
+]
+
+export const hourlyForecast = [
+    {
+        hour: '05:00',
+        temperature: 22,
+        humidity: 66,
+        suitable: true
+    },
+    {
+        hour: '06:00',
+        temperature: 18,
+        humidity: 75,
+        suitable: true
+    },
+    {
+        hour: '07:00',
+        temperature: 19,
+        humidity: 80,
+        suitable: true
+    },
+    {
+        hour: '08:00',
+        temperature: 19,
+        humidity: 81,
+        suitable: true
+    },
+
+]
+
+// Mock data para predicciones (mover a harvestMockData.ts)
+export const harvestPredictions = {
+    optimal: {
+        date: '2024-03-28',
+        confidence: 92,
+        yield: 7.2,
+        quality: 95
+    },
+    yieldPredictions: [
+        { date: '2024-03-26', yield: 6.8, quality: 88 },
+        { date: '2024-03-27', yield: 7.0, quality: 92 },
+        { date: '2024-03-28', yield: 7.2, quality: 95 },
+        { date: '2024-03-29', yield: 7.1, quality: 93 },
+        { date: '2024-03-30', yield: 6.9, quality: 89 }
+    ],
+    riskFactors: [
+        { factor: 'Clima', probability: 15, impact: 'Moderado' },
+        { factor: 'Plagas', probability: 8, impact: 'Bajo' },
+        { factor: 'Maduración', probability: 5, impact: 'Bajo' }
+    ]
+}
