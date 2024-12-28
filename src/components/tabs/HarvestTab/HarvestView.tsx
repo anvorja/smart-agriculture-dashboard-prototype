@@ -11,59 +11,6 @@ import {HarvestPredictions} from "@/components/tabs/HarvestTab/HarvestPrediction
 import {AIReportAnalysis} from "@/components/tabs/HarvestTab/AIReportAnalysis";
 import {QualityDistribution} from "@/components/tabs/HarvestTab/QualityDistribution";
 
-// export const HarvestView = () => {
-//     return (
-//         <div className="space-y-6">
-//             {/* Primera fila - Métricas principales */}
-//             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-//                 <MaturityStatus />
-//                 <YieldAnalysis />
-//                 <QualityMetrics />
-//             </div>
-//
-//             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-//                 <OrganicMatterAnalysis />
-//                 <CropReadiness />
-//             </div>
-//
-//             <WeatherPlanning />
-//             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-//                 <HarvestPredictions />
-//             <AIReportAnalysis />
-//             </div>
-//         </div>
-//     )
-// }
-// export const HarvestView = () => {
-//     return (
-//         <div className="space-y-6">
-//             {/* Primera fila - KPIs principales */}
-//             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-//                 <MaturityStatus />
-//                 <QualityMetrics />
-//                 <YieldAnalysis />
-//             </div>
-//
-//             {/* Segunda fila - Análisis detallado */}
-//             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-//                 <OrganicMatterAnalysis />
-//                 <CropReadiness />
-//             </div>
-//
-//             {/* Tercera fila - Planificación */}
-//             <div className="grid grid-cols-1 gap-6">
-//                 <WeatherPlanning />
-//             </div>
-//
-//             {/* Cuarta fila - IA y Predicciones */}
-//             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-//                 <HarvestPredictions />
-//                 <AIReportAnalysis />
-//             </div>
-//         </div>
-//     )
-// }
-
 export const HarvestView = () => {
     return (
         <div className="space-y-6">
