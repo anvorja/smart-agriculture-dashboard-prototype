@@ -1,1 +1,1 @@
-# smart-agriculture-dashboard-prototype
+# Smart Agriculture Dashboard Prototype
